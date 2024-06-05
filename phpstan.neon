@@ -1,0 +1,11 @@
+# phpstan.neon
+
+includes:
+  - ./vendor/larastan/larastan/extension.neon
+
+parameters:
+  level: 5
+  paths:
+    - app/
+
+# vim: ft=yaml
