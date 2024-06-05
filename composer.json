@@ -48,6 +48,12 @@
         ],
         "phpstan": [
             "phpstan analyze --memory-limit=2G -v"
+        ],
+        "lint": [
+            "pint --test"
+        ],
+        "format": [
+            "pint"
         ]
     },
     "extra": {
