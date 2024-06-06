@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<ruleset name="Laravel Linting and Formatting">
+    <!-- Configure here the paths you want to check -->
+    <file>.</file>
+
+    <config name="testVersion" value="8.3-"/>
+
+    <!-- Coding standards and rules to check -->
+    <rule ref="PSR1" />
+    <rule ref="PSR2" />
+    <rule ref="PSR12" />
+
+    <!-- Exceptions -->
+
+    <!-- Tailwind uses very long lines so better to have this here -->
+    <rule ref="Generic.Files.LineLength">
+        <properties>
+            <property name="lineLimit" value="120"/>
+            <property name="absoluteLineLimit" value="0"/>
+        </properties>
+    </rule>
+
+    <!-- Allow CamelCase in tests. If you are using Pest you might want to remove this rule exception -->
+    <rule ref="PSR1.Methods.CamelCapsMethodName.NotCamelCaps">
+        <exclude-pattern>/tests/</exclude-pattern>
+    </rule>
+
+    <!-- Since this is the entry point we can forgive this error in public/index.php -->
+    <rule ref="PSR1.Files.SideEffects.FoundWithSymbols">
+        <exclude-pattern>/public/index.php</exclude-pattern>
+    </rule>
+
+    <!-- End Exceptions -->
+
+    <!-- Show sniff codes in all reports -->
+    <arg value="sp"/>
+    <!-- Show sniff and progress -->
+    <arg name="parallel" value="8"/>
+    <!-- Enables parallel processing when available for faster results. -->
+    <arg name="colors"/>
+    <arg name="extensions" value="php"/>
+
+    <!-- Configure here the paths you want to IGNORE -->
+    <exclude-pattern>/node_modules/*</exclude-pattern>
+    <exclude-pattern>/vendor/*</exclude-pattern>
+    <exclude-pattern>/bootstrap/cache/*</exclude-pattern>
+</ruleset>
+
