@@ -69,11 +69,12 @@
             "@php artisan migrate --graceful --ansi"
         ],
         "format": [
-            "@composer normalize --indent-size=4 --indent-style=space"
+            "phpcbf",
+            "@composer normalize --indent-size=4 --indent-style=space --quiet"
         ],
         "lint": [
             "phpcs",
-            "@composer normalize --indent-size=4 --indent-style=space --dry-run"
+            "@composer normalize --indent-size=4 --indent-style=space --quiet --dry-run"
         ],
         "phpstan": [
             "phpstan analyze --memory-limit=2G -v"
