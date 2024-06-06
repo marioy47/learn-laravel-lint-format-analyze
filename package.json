@@ -11,6 +11,10 @@
         "cspell": "^8.8.4",
         "laravel-vite-plugin": "^1.0",
         "markdownlint-cli": "^0.41.0",
+        "npm-package-json-lint": "^7.1.0",
+        "npm-package-json-lint-config-default": "^6.0.0",
         "vite": "^5.0"
-    }
+    },
+    "name": "learn-laravel-lint-format-analyze",
+    "version": "1.0.0"
 }
