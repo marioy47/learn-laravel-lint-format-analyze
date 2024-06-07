@@ -68,13 +68,22 @@
             "@php -r \"file_exists('database/database.sqlite') || touch('database/database.sqlite');\"",
             "@php artisan migrate --graceful --ansi"
         ],
+        "composer-normalize": [
+            "@composer normalize --indent-size=4 --indent-style=space --quiet"
+        ],
         "format": [
             "phpcbf",
-            "@composer normalize --indent-size=4 --indent-style=space --quiet"
+            "@composer-normalize"
         ],
         "lint": [
             "phpcs",
-            "@composer normalize --indent-size=4 --indent-style=space --quiet --dry-run"
+            "@composer-normalize --dry-run"
+        ],
+        "phpcbf": [
+            "phpcbf"
+        ],
+        "phpcs": [
+            "phpcs"
         ],
         "phpstan": [
             "phpstan analyze --memory-limit=2G -v"
