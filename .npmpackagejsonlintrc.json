@@ -1,7 +1,11 @@
 {
     "extends": "npm-package-json-lint-config-default",
-    "rules" : {
+    "rules": {
         "require-private": "error",
-        "require-type": "error"
+        "require-type": "error",
+        "prefer-property-order": [
+            "error",
+            []
+        ]
     }
 }
