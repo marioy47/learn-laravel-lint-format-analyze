@@ -6,6 +6,7 @@
     <config name="testVersion" value="8.3-"/>
 
     <!-- Coding standards and rules to check -->
+    <rule ref="PEAR" />
     <rule ref="PSR1" />
     <rule ref="PSR2" />
     <rule ref="PSR12" />
@@ -18,6 +19,16 @@
             <property name="lineLimit" value="120"/>
             <property name="absoluteLineLimit" value="0"/>
         </properties>
+    </rule>
+
+    <!-- Commenting files is not that useful (unless you are worried about copyrights) -->
+    <rule ref="PEAR">
+        <exclude name="PEAR.Commenting.FileComment.Missing" />
+        <exclude name="PEAR.Commenting.ClassComment.MissingAuthorTag" />
+        <exclude name="PEAR.Commenting.ClassComment.MissingCategoryTag" />
+        <exclude name="PEAR.Commenting.ClassComment.MissingLicenseTag" />
+        <exclude name="PEAR.Commenting.ClassComment.MissingLinkTag" />
+        <exclude name="PEAR.Commenting.ClassComment.MissingPackageTag" />
     </rule>
 
     <!-- Allow CamelCase in tests. If you are using Pest you might want to remove this rule exception -->
