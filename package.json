@@ -5,7 +5,16 @@
     "scripts": {
         "dev": "vite",
         "build": "vite build",
-        "cspell-with-flags": "cspell --relative --dot --no-progress --show-suggestions --show-context --quiet"
+        "cspell-with-flags": "cspell --relative --dot --no-progress --show-suggestions --show-context --quiet",
+        "lint:php": "vendor/bin/sail composer lint",
+        "lint:md": "markdownlint .",
+        "lint:cspell": "npm run cspell-with-flags -- .",
+        "lint:package-json": "npmPkgJsonLint .",
+        "lint": "run-p lint:*",
+        "format:php": "vendor/bin/sail composer format",
+        "format:md": "markdownlint --fix .",
+        "format:package-json": "npmPkgJsonLint .",
+        "format": "run-p format:*"
     },
     "devDependencies": {
         "axios": "^1.6.4",
@@ -14,6 +23,7 @@
         "markdownlint-cli": "^0.41.0",
         "npm-package-json-lint": "^7.1.0",
         "npm-package-json-lint-config-default": "^6.0.0",
+        "npm-run-all": "^4.1.5",
         "vite": "^5.0"
     },
     "private": true
