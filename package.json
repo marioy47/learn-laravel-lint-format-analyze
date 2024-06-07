@@ -17,6 +17,8 @@
         "format": "run-p format:*"
     },
     "devDependencies": {
+        "@commitlint/cli": "^19.3.0",
+        "@commitlint/config-conventional": "^19.2.2",
         "axios": "^1.6.4",
         "cspell": "^8.8.4",
         "laravel-vite-plugin": "^1.0",
