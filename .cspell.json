@@ -22,6 +22,7 @@
         "phpredis",
         "phpunit",
         "roundrobin",
+        "ruleset",
         "sasl",
         "sslmode",
         "symfony",
@@ -45,6 +46,7 @@
         "node_modules/**",
         "phpstan.neon",
         "phpunit.xml",
+        "storage/**",
         "vendor/**",
     ]
 }

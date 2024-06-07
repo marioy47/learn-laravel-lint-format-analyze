@@ -4,7 +4,7 @@
     "scripts": {
         "dev": "vite",
         "build": "vite build",
-        "cspell-with-flags": "cspell --relative --dot --no-progress --show-suggestions --show-context"
+        "cspell-with-flags": "cspell --relative --dot --no-progress --show-suggestions --show-context --quiet"
     },
     "devDependencies": {
         "axios": "^1.6.4",
