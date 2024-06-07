@@ -1,0 +1,14 @@
+{
+    "*.php": [
+        "./vendor/bin/sail composer phpstan",
+        "./vendor/bin/sail composer phpcbf",
+        "npm run cspell-with-flags --"
+    ],
+    "*.md": [
+        "npm run cspell-with-flags --",
+        "npx markdownlint --fix"
+    ],
+    "composer.json": [
+        "./vendor/bin/sail composer composer-normalize"
+    ]
+}
