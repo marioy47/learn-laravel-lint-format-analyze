@@ -1,33 +1,35 @@
 {
-    "name": "learn-laravel-lint-format-analyze",
-    "version": "1.0.0",
-    "type": "module",
-    "scripts": {
-        "dev": "vite",
-        "build": "vite build",
-        "cspell-with-flags": "cspell --relative --dot --no-progress --show-suggestions --show-context --quiet",
-        "lint:php": "vendor/bin/sail composer lint",
-        "lint:md": "markdownlint .",
-        "lint:cspell": "npm run cspell-with-flags -- .",
-        "lint:package-json": "npmPkgJsonLint .",
-        "lint": "run-p lint:*",
-        "format:php": "vendor/bin/sail composer format",
-        "format:md": "markdownlint --fix .",
-        "format:package-json": "npmPkgJsonLint .",
-        "format": "run-p format:*"
-    },
-    "devDependencies": {
-        "@commitlint/cli": "^19.3.0",
-        "@commitlint/config-conventional": "^19.2.2",
-        "axios": "^1.6.4",
-        "cspell": "^8.8.4",
-        "laravel-vite-plugin": "^1.0",
-        "lint-staged": "^15.2.5",
-        "markdownlint-cli": "^0.41.0",
-        "npm-package-json-lint": "^7.1.0",
-        "npm-package-json-lint-config-default": "^6.0.0",
-        "npm-run-all": "^4.1.5",
-        "vite": "^5.0"
-    },
-    "private": true
+  "name": "learn-laravel-lint-format-analyze",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "cspell-with-flags": "cspell --relative --dot --no-progress --show-suggestions --show-context --quiet",
+    "lint:php": "vendor/bin/sail composer lint",
+    "lint:md": "markdownlint .",
+    "lint:cspell": "npm run cspell-with-flags -- .",
+    "lint:package-json": "npmPkgJsonLint .",
+    "lint": "run-p lint:*",
+    "format:php": "vendor/bin/sail composer format",
+    "format:md": "markdownlint --fix .",
+    "format:package-json": "npmPkgJsonLint .",
+    "format": "run-p format:*",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "axios": "^1.6.4",
+    "cspell": "^8.8.4",
+    "husky": "^9.0.11",
+    "laravel-vite-plugin": "^1.0",
+    "lint-staged": "^15.2.5",
+    "markdownlint-cli": "^0.41.0",
+    "npm-package-json-lint": "^7.1.0",
+    "npm-package-json-lint-config-default": "^6.0.0",
+    "npm-run-all": "^4.1.5",
+    "vite": "^5.0"
+  },
+  "private": true
 }
