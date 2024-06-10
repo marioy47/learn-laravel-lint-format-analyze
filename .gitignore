@@ -18,3 +18,6 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+
+# Because this is starter project and not a full fledged app.
+package-lock.json
